@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero começar minha transformação!";
+const WHATSAPP_URL = "https://wa.me/5512982642197?text=Olá! Quero começar minha transformação!";
 
 const FinalCTASection = () => {
   return (
