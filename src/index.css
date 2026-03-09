@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 90%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 90%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 90%;
+
+    --primary: 14 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 14 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 14 100% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 14 100% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 14 100% 55%;
+
+    --font-heading: 'Archivo Black', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .section-block {
+    @apply w-full py-20 md:py-28 px-4 md:px-8;
+  }
+
+  .container-inset {
+    @apply max-w-5xl mx-auto bg-card rounded-lg p-6 md:p-10;
+  }
+
+  .heading-display {
+    font-family: var(--font-heading);
+    @apply text-3xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-none text-foreground;
+  }
+
+  .heading-section {
+    font-family: var(--font-heading);
+    @apply text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight text-foreground;
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+    @apply text-base md:text-lg text-muted-foreground leading-relaxed;
+  }
+
+  .cta-button {
+    @apply bg-primary text-primary-foreground font-semibold py-4 px-8 rounded-lg text-base md:text-lg uppercase tracking-wider transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98];
+    font-family: var(--font-body);
+  }
+
+  .stat-number {
+    font-family: var(--font-heading);
+    @apply text-4xl md:text-5xl text-primary;
+  }
+}
